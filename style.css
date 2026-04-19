@@ -1,5 +1,3 @@
-έχω αυτό το css
-
 html,
 body,
 #root {
@@ -78,6 +76,7 @@ body {
     0 8px 18px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   transition: background 0.6s ease;
+  z-index: 6;
 }
 
 .hero-copy-left {
@@ -155,6 +154,7 @@ body {
   z-index: 0;
 }
 
+/* TABLET */
 @media (max-width: 1024px) {
   .hero-card {
     width: 88vw;
@@ -178,90 +178,9 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-card {
-    width: 92vw;
-    height: 78vh;
-    border-radius: 16px;
-  }
 
-  .hero-copy-left {
-    left: 22px;
-    top: 22px;
-  }
 
-  .hero-small-text {
-    font-size: 11px;
-    margin-bottom: 14px;
-  }
-
-  .hero-title {
-    font-size: clamp(48px, 13vw, 82px);
-  }
-
-  .hero-blob {
-    width: 170px;
-    height: 150px;
-    right: 50%;
-    top: 56%;
-    transform: translate(50%, -50%);
-  }
-
-  .hero-info-right {
-    right: 20px;
-    bottom: 20px;
-    top: auto;
-    transform: none;
-    width: 110px;
-  }
-}
-
-.hero-copy-left {
-  position: absolute;
-  left: 56px;
-  top: 58px;
-  z-index: 30;
-}
-
-.hero-info-right {
-  position: absolute;
-  right: 56px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 140px;
-  z-index: 30;
-  color: var(--text);
-  transition: color 0.6s ease;
-}
-
-.hero-blob {
-  position: absolute;
-  width: 300px;
-  height: 270px;
-  right: 290px;
-  top: 52%;
-  transform: translateY(-50%);
-  background: var(--blob);
-  border-radius: 56% 44% 52% 48% / 45% 57% 43% 55%;
-  z-index: 8;
-  transition: background 0.6s ease;
-}
-
-.hero-card {
-  position: absolute;
-  inset: 50%;
-  width: min(1100px, 78vw);
-  height: min(620px, 68vh);
-  transform: translate(-50%, -50%);
-  background: var(--card);
-  border-radius: 20px;
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.12),
-    0 8px 18px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: background 0.6s ease;
-  z-index: 6;
-}
+/* SECOND SECTION (ΔΕΝ ΤΟ ΠΕΙΡΑΞΑ) */
 
 .showcase-section {
   position: relative;
@@ -335,3 +254,25 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-info-right {
+    position: absolute !important;
+    right: 18px !important;
+    top: auto !important;
+    bottom: 18px !important;
+    left: auto !important;
+    transform: none !important;
+    width: 110px !important;
+  }
+
+  .hero-info-title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-info-item {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    padding: 6px 0 !important;
+  }
+}
